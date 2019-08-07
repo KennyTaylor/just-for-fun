@@ -1,0 +1,13 @@
+b:q                                      ;state
+g:""
+F i 0,5 {                                ;get ~all~ the data
+  a:((q^s))                              ;a is ["Live","rest","of","words"]
+  e:(a@>1)Jx                             ;e is a[1] to a[#a-1] joined on ""
+  d:q^s                                  ;d is ["rent:","link.."]
+  c:q^s                                  ;c is ["buy:","link.."]
+    g.:"{name:'".e."',".n." state:'".b       
+    g.:"', jump:'".(c1)
+    g.:"', rentJump:'".(d1)."'},".n
+f:q                                      ;read blank line to advance stream
+}
+g
