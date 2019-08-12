@@ -1,0 +1,9 @@
+P"Input base 10 number"
+a:q
+c:x
+
+W a>0 {
+c:(a%2=1).c
+a:a//2
+}
+c
