@@ -1,0 +1,41 @@
+;WIP response to code-golf: https://codegolf.stackexchange.com/questions/189786/simplification-of-numbers
+
+e:q
+;(dab) param a:base 10 number, b:base to convert to 
+d:{
+ c:x
+ W a>0{
+  I a%b>9 {            ; safety if
+   c:(C((a%b)+55)).c   ; ascii stuff
+  } E {
+   c:(a%b).c           ; prepend the remainder
+  }
+  a:a//b               ; integer division
+ }
+ c
+}
+
+Fi 2,37 {
+ l:lAE(dei)
+ P(dei)."  base: ".i
+ ; P(li-2
+}
+
+;TODO: make shorter with map block to iterable and functions
+
+
+F i,#l {
+f:1
+ Fj,36{
+  j<10?g:j(g:C(j+55))
+ 
+  c:(li)@*g
+  ((#c)>f)?f:#cx
+ }
+ P(li)
+ Pf
+ f>o?o:(li)x           ; determine which base is the  "most memorizable"
+
+ ;TODO: iterate over each base (li) then determine the one with the least unique characters
+}
+i
