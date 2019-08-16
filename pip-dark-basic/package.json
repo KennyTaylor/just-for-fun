@@ -1,0 +1,21 @@
+{
+    "name": "pip-dark-basic",
+    "displayName": "pip-dark-basic",
+    "description": "a simple dark theme for the Pip language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.37.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Pip Is Poorly lit",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Pip Is Poorly lit-color-theme.json"
+            }
+        ]
+    }
+}

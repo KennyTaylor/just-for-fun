@@ -1,0 +1,36 @@
+{
+  "name": "piplint",
+  "displayName": "piplint",
+  "publisher": "ken",
+  "description": "linter for Pip",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.37.0"
+  },
+  "categories": [
+    "Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "pip",
+        "aliases": [
+          "Pip Is Pip",
+          "pip",
+          "Pip"
+        ],
+        "extensions": [
+          ".pip"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "pip",
+        "scopeName": "source.pip",
+        "path": "./syntaxes/pip.tmLanguage.json"
+      }
+    ]
+  }
+}
